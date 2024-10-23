@@ -1,0 +1,42 @@
+.ticket-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.ticket-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.ticket-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.ticket-card strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.ticket-card .priority-high {
+  color: red;
+}
+
+.ticket-card .priority-medium {
+  color: orange;
+}
+
+.ticket-card .priority-low {
+  color: green;
+}
+
+.ticket-card .priority-no {
+  color: gray;
+}

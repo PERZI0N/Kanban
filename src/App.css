@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(229, 228, 228);
+}
+.app{
+  padding: 2rem;
+}
+.kanban-container {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-button {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dropdown-button:hover .dropdown-content {
+  display: block;
+}
+
+select {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.kanban-column {
+  background-color: #f4f5f7;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+}
+
+.kanban-column h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.kanban-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.kanban-card h3 {
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.kanban-card .card-meta {
+  font-size: 0.85rem;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kanban-card .card-meta img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.kanban-card .card-tag {
+  font-size: 0.75rem;
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .kanban-column {
+    min-width: 100%;
   }
 }
